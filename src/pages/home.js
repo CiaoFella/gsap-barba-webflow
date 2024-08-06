@@ -1,7 +1,7 @@
 import heroAnimation from '../animations/hero';
 
 function init() {
-  console.log('hero init');
+  console.log('home init');
   heroAnimation.init();
 }
 

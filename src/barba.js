@@ -1,7 +1,7 @@
 import barba from '@barba/core';
 import gsap from 'gsap';
 
-export default barba.init({
+barba.init({
   transitions: [
     {
       name: 'default-transition',
@@ -40,3 +40,5 @@ export default barba.init({
     },
   ],
 });
+
+export default barba;
