@@ -2,6 +2,11 @@ import barba from './barba';
 
 let currentAnimationModule = null;
 
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('main.js init');
+  barba.init();
+});
+
 function cleanupCurrentModule() {
   if (currentAnimationModule && currentAnimationModule.cleanup) {
     currentAnimationModule.cleanup();
@@ -24,8 +29,4 @@ barba.hooks.after(({ next }) => {
     .catch(err => {
       console.error(`Failed to load module for page: ${pageName}`, err);
     });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  barba.init();
 });
