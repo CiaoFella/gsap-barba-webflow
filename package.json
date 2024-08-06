@@ -1,7 +1,7 @@
 {
-  "name": "wkndhrs",
+  "name": "gsap-barba-webflow",
   "version": "1.0.0",
-  "description": "Webflow project with GSAP and Barba.js",
+  "description": "Webflow starter project with GSAP and Barba.js connected with netlify",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
