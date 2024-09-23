@@ -32,7 +32,7 @@ This project is a starter template for building a web application using Webflow,
 │ ├── pages/ # Page modules \
 │ ├── styles/ # SASS styles \
 │ ├── utilities/ # Utility functions \
-│ ├── vendor.js # Third-party libraries
+│ ├── vendor.js # Third-party libraries \
 │ ├── index.js # Entry point \
 │ └── main.js # Main application logic \
 ├── .gitignore # Git ignore file \
