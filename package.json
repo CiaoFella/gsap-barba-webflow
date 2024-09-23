@@ -7,23 +7,23 @@
     "dev": "webpack serve --mode development",
     "build-css": "sass --style=compressed --no-source-map src/styles/style.scss dist/style.css && sass --style=compressed --no-source-map src/styles/style.scss src/style.css",
     "watch-css": "concurrently \"sass --watch --style=compressed --no-source-map src/styles/style.scss dist/style.css\" \"sass --watch --style=compressed --no-source-map src/styles/style.scss src/style.css\"",
+    "build": "yarn add -D webpack-cli && npm run build-js && npm run build-css",
     "build-js": "webpack --config webpack.config.cjs",
-    "build": "npm run build-js && npm run build-css",
     "start": "webpack-dev-server --config webpack.config.cjs",
     "lint": "eslint 'src/**/*.{js,ts}' --quiet",
     "format": "prettier --write 'src/**/*.{js,ts,css}'"
   },
   "dependencies": {
     "@barba/core": "^2.10.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "file-loader": "^6.2.0",
     "gsap": "^3.9.1",
     "sass": "^1.77.8",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.93.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "file-loader": "^6.2.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
-    "copy-webpack-plugin": "^12.0.2",
-    "terser-webpack-plugin": "^5.3.10"
+    "webpack-dev-server": "^5.0.4"
   },
   "devDependencies": {
     "babel-loader": "^9.1.3",
