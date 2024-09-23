@@ -1,15 +1,14 @@
-import heroAnimation from '../animations/hero';
+import shared from '../animations/shared.js'
 
 function init() {
-  console.log('home init');
-  heroAnimation.init();
+  shared.init()
 }
 
 function cleanup() {
-  heroAnimation.cleanup();
+  shared.cleanup()
 }
 
 export default {
   init,
   cleanup,
-};
+}

@@ -1,21 +1,40 @@
-import barba from '@barba/core';
-import gsap from 'gsap';
+import { cursor, magneticCursor } from './utilities/customCursor/customCursor.js'
+import { closeMenu } from './utilities/helper.js'
+import { proxy } from './utilities/pageReadyListener.js'
+import { isDesktop } from './utilities/variables.js'
+import { gsap, barba, ScrollTrigger } from './vendor.js'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const mm = gsap.matchMedia()
+
+barba.hooks.before(data => {
+  data.next.container.classList.add('is-animating')
+})
+
+barba.hooks.after(data => {
+  data.next.container.classList.remove('is-animating')
+})
 
 barba.init({
+  preventRunning: false,
   transitions: [
     {
       name: 'default-transition',
+      sync: true,
       leave(data) {
-        let done = this.async();
-        gsap.to(data.current.container, {
-          opacity: 0,
-          onComplete: done,
-        });
+        const done = this.async()
+        proxy.pageReady = false
+        closeMenu()
       },
-      enter(data) {
-        gsap.from(data.next.container, {
-          opacity: 0,
-        });
+      after(data) {
+        mm.add(isDesktop, () => {
+          const customCursor = document.querySelector('.cb-cursor')
+          customCursor.remove()
+          cursor.init()
+          magneticCursor()
+        })
+        proxy.pageReady = true
       },
     },
   ],
@@ -39,6 +58,6 @@ barba.init({
       },
     },
   ],
-});
+})
 
-export default barba;
+export default barba
