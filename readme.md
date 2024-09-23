@@ -1,4 +1,3 @@
-```markdown
 # Webflow Barba GSAP Starter
 
 ## Overview
@@ -25,7 +24,6 @@ This project is a starter template for building a web application using Webflow,
 - **Netlify**: Hosting platform
 
 ## Project Structure
-```
 
 /webflow-barba-gsap-starter
 ├── dist/ # Compiled output
@@ -43,8 +41,6 @@ This project is a starter template for building a web application using Webflow,
 ├── netlify.toml # Netlify configuration
 └── webpack.config.cjs # Webpack configuration
 
-````
-
 ## Setup Instructions
 
 ### Prerequisites
@@ -59,6 +55,8 @@ This project is a starter template for building a web application using Webflow,
    ```bash
    git clone https://github.com/yourusername/webflow-barba-gsap-starter.git
    cd webflow-barba-gsap-starter
+   ```
+
 ````
 
 2. **Install dependencies**:
@@ -116,3 +114,4 @@ Feel free to customize this README file further to suit your project's specific 
 ```
 
 ```
+````
