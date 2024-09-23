@@ -25,6 +25,7 @@ This project is a starter template for building a web application using Webflow,
 
 ## Project Structure
 
+```bash
 /webflow-barba-gsap-starter \
 ├── dist/ # Compiled output \
 ├── src/ # Source files \
@@ -41,6 +42,7 @@ This project is a starter template for building a web application using Webflow,
 ├── package-lock.json # Lockfile for npm dependencies \
 ├── netlify.toml # Netlify configuration \
 └── webpack.config.cjs # Webpack configuration \
+```
 
 ## Setup Instructions
 
