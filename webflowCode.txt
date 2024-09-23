@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="https://wkndhrs.netlify.app/style.css"/>
+<link rel="stylesheet" href="https://netlify.app/style.css"/>
 
 <script>
 function loadMainScript() {
-  const netlifyBaseUrl = 'https://wkndhrs.netlify.app/';
-  const localhostBaseUrl = 'http://localhost:3000/';
+  const netlifyBaseUrl = 'https://url.netlify.app/';
+  const localhostBaseUrl = 'http://localhost:1235/';
 
   // URLs for the scripts and stylesheets
   const mainScriptUrl = `${localhostBaseUrl}main.js`;
