@@ -107,3 +107,9 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+## Author
+
+This README file was created by **Julian Fella**. I created this file because I found myself doing the same things over and over again, and I wanted the ultimate starter template for Webflow, Barba.js, and GSAP.
