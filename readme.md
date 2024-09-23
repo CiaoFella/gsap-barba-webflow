@@ -57,8 +57,6 @@ This project is a starter template for building a web application using Webflow,
    cd webflow-barba-gsap-starter
    ```
 
-````
-
 2. **Install dependencies**:
 
    ```bash
@@ -114,4 +112,7 @@ Feel free to customize this README file further to suit your project's specific 
 ```
 
 ```
-````
+
+```
+
+```
