@@ -26,22 +26,22 @@ This project is a starter template for building a web application using Webflow,
 ## Project Structure
 
 ```bash
-/webflow-barba-gsap-starter \
-├── dist/ # Compiled output \
-├── src/ # Source files \
-│ ├── animations/ # Animation modules \
-│ ├── pages/ # Page modules \
-│ ├── styles/ # SASS styles \
-│ ├── utilities/ # Utility functions \
-│ ├── vendor.js # Third-party libraries \
-│ ├── index.js # Entry point \
-│ └── main.js # Main application logic \
-├── .gitignore # Git ignore file \
-├── .eslintrc.js # ESLint configuration \
-├── package.json # Project metadata and dependencies \
-├── package-lock.json # Lockfile for npm dependencies \
-├── netlify.toml # Netlify configuration \
-└── webpack.config.cjs # Webpack configuration \
+/webflow-barba-gsap-starter
+├── dist/ # Compiled output
+├── src/ # Source files
+│ ├── animations/ # Animation modules
+│ ├── pages/ # Page modules
+│ ├── styles/ # SASS styles
+│ ├── utilities/ # Utility functions
+│ ├── vendor.js # Third-party libraries
+│ ├── index.js # Entry point
+│ └── main.js # Main application logic
+├── .gitignore # Git ignore file
+├── .eslintrc.js # ESLint configuration
+├── package.json # Project metadata and dependencies
+├── package-lock.json # Lockfile for npm dependencies
+├── netlify.toml # Netlify configuration
+└── webpack.config.cjs # Webpack configuration
 ```
 
 ## Setup Instructions
