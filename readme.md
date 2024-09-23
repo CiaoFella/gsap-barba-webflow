@@ -71,7 +71,7 @@ To start the development server, run:
 npm run dev
 ```
 
-This will start the Webpack development server and open your application in the browser at `http://localhost:3000`.
+This will start the Webpack development server and open your application in the browser at `http://localhost:1235`.
 
 ### Building for Production
 
