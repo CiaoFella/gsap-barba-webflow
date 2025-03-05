@@ -1,39 +1,45 @@
-import { Lenis } from '../vendor.js'
+import { LocomotiveScroll, gsap } from '../vendor.js'
+import { isDesktop, isTablet } from './variables.js'
 
-const lenis = new Lenis({
-  lerp: 0.1,
-  wheelMultiplier: 0.7,
-  gestureOrientation: 'vertical',
-  normalizeWheel: false,
-  smoothTouch: false,
+const mm = gsap.matchMedia()
+
+let lerp
+let wheelMultiplier
+let touchMultiplier
+
+mm.add(isTablet, () => {
+  lerp = 0.975
+  wheelMultiplier = 0
+  touchMultiplier = 0
 })
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+
+mm.add(isDesktop, () => {
+  lerp = 0.2
+  wheelMultiplier = 0.7
+  touchMultiplier = 0
+})
+
+let locomotiveScroll = null
+
+export function createSmoothScroll(options = {}) {
+  if (locomotiveScroll) {
+    locomotiveScroll.destroy()
+  }
+  locomotiveScroll = new LocomotiveScroll({
+    lerp,
+    wheelMultiplier,
+    touchMultiplier,
+    ...options,
+  })
+
+  return locomotiveScroll
 }
-requestAnimationFrame(raf)
 
-document.querySelectorAll('[data-lenis-start]').forEach(function (element) {
-  element.addEventListener('click', function () {
-    lenis.start()
-  })
-})
+export function getSmoothScroll() {
+  return locomotiveScroll
+}
 
-document.querySelectorAll('[data-lenis-stop]').forEach(function (element) {
-  element.addEventListener('click', function () {
-    lenis.stop()
-  })
-})
+// Create initial locomotiveScroll
+locomotiveScroll = createSmoothScroll()
 
-document.querySelectorAll('[data-lenis-toggle]').forEach(function (element) {
-  element.addEventListener('click', function () {
-    element.classList.toggle('stop-scroll')
-    if (element.classList.contains('stop-scroll')) {
-      lenis.stop()
-    } else {
-      lenis.start()
-    }
-  })
-})
-
-export default lenis
+export default locomotiveScroll
