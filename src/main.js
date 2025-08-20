@@ -21,9 +21,27 @@ function resetWebflow(data) {
   let dom = parser.parseFromString(data.next.html, 'text/html')
   let webflowPageId = $(dom).find('html').attr('data-wf-page')
   $('html').attr('data-wf-page', webflowPageId)
-  window.Webflow && window.Webflow.destroy()
-  window.Webflow && window.Webflow.ready()
-  window.Webflow && window.Webflow.require('ix2').init()
+
+  if (window.Webflow) {
+    // Destroy existing Webflow instance
+    if (typeof window.Webflow.destroy === 'function') {
+      window.Webflow.destroy()
+    }
+
+    // Reinitialize Webflow
+    if (typeof window.Webflow.ready === 'function') {
+      window.Webflow.ready()
+    }
+
+    // Load/initialize Webflow for the new page
+    if (typeof window.Webflow.load === 'function') {
+      window.Webflow.load()
+    }
+
+    if (typeof window.Webflow.require === 'function') {
+      window.Webflow.require('ix2').init()
+    }
+  }
 }
 
 function cleanupCurrentModule() {
